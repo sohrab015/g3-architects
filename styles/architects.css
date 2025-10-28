@@ -35,6 +35,15 @@
     border-radius: 7.5px;
 }
 
+main{
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+main > section{
+    margin-top: 100px;
+}
+
 
 
 /* header and nav bar styles */
@@ -77,6 +86,31 @@
 
 .banner-img{
     width: 100%;
+    border-radius: 8px;
+}
+
+/* team and features related styles */
+.teams{
+   align-items: center; 
+}
+
+.team-img-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 18px;
+}
+
+.our-features{
+    margin-left: 130px;
+}
+
+.features-title{
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+#quick-list{
+    font-weight: 500;
 }
 
 
@@ -85,5 +119,6 @@
 @media screen and (max-width: 576px) {
     .navbar, .nav-link{
         flex-direction: column;
+        max-width: 400px;
     }
 }
