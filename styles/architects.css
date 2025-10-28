@@ -1,31 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Work+Sans:wght@400;600;700&display=swap');
 
-
-.work-sans-font{
-  font-family: "Work Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+.work-sans-font {
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
-/* sheared styles */
-.display-flex{      
-    display: flex;   
+/* ===== Shared Styles ===== */
+.display-flex {
+    display: flex;
 }
 
-.txt-grey{
-    color: #424242;   /* dark 02 */
+.txt-grey {
+    color: #424242;
+    /* dark 02 */
 }
 
-.txt-light-grey{
-    color: #727272;   /* dark 03 */
+.txt-light-grey {
+    color: #727272;
+    /* dark 03 */
 }
 
-.bg-light{
+.txt-primary {
+    color: #FF900E;
+}
+
+.bg-light {
     background-color: rgba(255, 144, 14, 0.1);
 }
 
-.btn-primary{
+.btn-primary {
     background-color: #FF900E;
     border: none;
     color: white;
@@ -33,92 +38,149 @@
     font-size: 1rem;
     font-weight: 600;
     border-radius: 7.5px;
+    cursor: pointer;
 }
 
-main{
+.section-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+main {
     max-width: 1080px;
     margin: 0 auto;
 }
 
-main > section{
+main>section {
     margin-top: 100px;
 }
 
-
-
-/* header and nav bar styles */
-.navbar{
+/* ===== Navbar ===== */
+.navbar {
     justify-content: space-between;
     align-items: center;
+    padding: 20px 0;
+    max-width: 1080px;
+    margin: 0 auto;
 }
 
-.brand{
+.brand {
     font-weight: 700;
     font-size: 2.25rem;
 }
 
-.nav-item{
+.nav-links {
     list-style: none;
-    margin-right: 30px;
+    display: flex;
+    gap: 30px;
 }
 
-.nav-link{
+.nav-link {
     text-decoration: none;
+    color: #424242;
+    font-weight: 500;
 }
 
-.navbar, .banner{
+/* ===== Banner ===== */
+.banner {
     max-width: 1080px;
     margin: 0 auto;
-}
-
-/* banner releted styles */
-.banner-content{
-    max-width: 640px;
-    margin: 0 auto;
     text-align: center;
-    margin-bottom: 37.5px;
 }
 
-.banner-title{
+.banner-content {
+    max-width: 640px;
+    margin: 0 auto 37.5px;
+}
+
+.banner-title {
     font-weight: 700;
     font-size: 3rem;
+    margin-bottom: 10px;
 }
 
-.banner-img{
+.banner-img {
     width: 100%;
     border-radius: 8px;
 }
 
-/* team and features related styles */
-.teams{
-   align-items: center; 
+/* ===== Team & Features ===== */
+.teams {
+    align-items: center;
+    gap: 40px;
 }
 
-.team-img-container{
+.team-img-container {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 18px;
 }
 
-.our-features{
-    margin-left: 130px;
+.team-img-container img {
+    width: 100%;
+    border-radius: 8px;
 }
 
-.features-title{
-    font-size: 2.2rem;
-    font-weight: bold;
-}
-
-#quick-list{
-    font-weight: 500;
+.our-features {
+    max-width: 400px;
 }
 
 
 
-/* responsive media query */
+/* ===== Responsive ===== */
 @media screen and (max-width: 576px) {
-    .navbar, .nav-link{
+    .navbar {
         flex-direction: column;
-        max-width: 400px;
+        align-items: center;
+    }
+
+    .nav-links {
+        align-items: center;
+        gap: 10px;
+        padding: 0;
+    }
+
+    .teams {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-img-container {
+        grid-template-columns: 1fr;
+    }
+
+    .our-features {
+        margin: 20px auto 0;
+        width: 90%;
+        text-align: center;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .banner-title {
+        font-size: 2.2rem;
+    }
+
+    .btn-primary {
+        padding: 12px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+
+
+/* medium devices */
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    .teams{
+        flex-direction: column;
+    }
+
+    .our-features {
+        margin: 20px auto 50px;
+        width: 90%;
+        text-align: center;
     }
 }
