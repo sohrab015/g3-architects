@@ -7,7 +7,7 @@
     font-style: normal;
 }
 
-/* ===== Shared Styles ===== */    
+/* ===== Shared Styles ===== */
 .display-flex {
     display: flex;
 }
@@ -126,13 +126,62 @@ main>section {
     max-width: 400px;
 }
 
+/* features releted style */
+.features {
+    gap: 70px;
+}
+
+.features img {
+    max-width: 45vw;
+    height: 99%;
+}
+
+.feature-card {
+    padding: 22.5px;
+    box-shadow: 0 3px 22.5px 0 rgba(0, 0, 0, 0.05);
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.feature-card .feature-title {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.feature-card p {
+    font-size: 0.93rem;
+}
+
+#feature-section-title {
+    border-left: 5px solid #FF900E;
+    padding-left: 17px;
+    border-radius: 4px;
+}
+
+/* #experience-badge{
+    padding: 35px 32px;
+    text-align: center;
+    font-size: 0.94rem;
+    font-weight: 500;
+    margin-left: -100px;
+    margin-top: -100px;
+}
+
+#experience-year{
+    font-size: 3rem;
+    font-weight: 700;
+} */
+
+
 /* some facts related styles */
-.facts-container{
+.facts-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
 
-.fact-card{
+.fact-card {
     border: 1px solid #FF900E;
     width: 180px;
     height: 180px;
@@ -144,37 +193,37 @@ main>section {
     text-align: center;
 }
 
-.fact-number{
+.fact-number {
     font-size: 2.1rem;
     font-weight: 600;
     margin-top: 3.5px;
     margin-bottom: 7.5px;
 }
 
-.fact-name{
+.fact-name {
     font-size: 0.94rem;
     font-weight: 600;
     margin-top: 7.5px;
 }
 
-.facts-des{
+.facts-des {
     max-width: 400px;
 }
 
 
 /* sponsor releted styles */
-.sponsor-info{
+.sponsor-info {
     max-width: 400px;
     margin: 40px auto;
     text-align: center;
 }
 
-.sponsors-companies{
+.sponsors-companies {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 }
 
-.sponsors-companies img{
+.sponsors-companies img {
     filter: grayscale(100%);
 }
 
@@ -199,18 +248,27 @@ main>section {
         align-items: center;
     }
 
-    .team-img-container, 
+    .team-img-container,
     .facts-container,
     .sponsors-companies {
         grid-template-columns: 1fr;
     }
 
-    .facts-container{
+    .facts-container {
         justify-items: center;
         gap: 20px;
     }
 
-    .sponsors-companies{
+    #facts-heading {
+        text-align: center;
+    }
+
+    .facts-des {
+        margin: 30px auto;
+        text-align: center;
+    }
+
+    .sponsors-companies {
         justify-content: center;
         gap: 40px;
         justify-items: center;
@@ -234,13 +292,30 @@ main>section {
         padding: 12px 16px;
         font-size: 0.9rem;
     }
+
+    .features {
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .features img {
+        max-width: 90vw;
+        height: 99%;
+    }
+
+    .feature-txt-section {
+        max-width: 90vw;
+    }
 }
 
 
 
 /* medium devices */
 @media screen and (min-width: 576px) and (max-width: 992px) {
-    .teams{
+    .teams {
         flex-direction: column;
     }
 
@@ -254,14 +329,46 @@ main>section {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .facts-container{
+    .facts-container {
         justify-items: center;
         gap: 24px;
     }
 
-    .sponsors-companies{
+    #facts-heading {
+        text-align: center;
+    }
+
+    .facts-des {
+        margin: 30px auto;
+        text-align: center;
+    }
+
+
+    .sponsors-companies {
         grid-template-columns: repeat(2, 1fr);
         gap: 40px;
         justify-items: center;
+    }
+
+    .features {
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .features img {
+        max-width: 90vw;
+        height: 99%;
+    }
+
+    .feature-txt-section {
+        max-width: 90vw;
+    }
+
+    .feature-card-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
